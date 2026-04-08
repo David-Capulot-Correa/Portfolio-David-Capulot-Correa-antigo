@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Nunito:wght@200..900&display=swap');
+
+/* ==============================
+   VARIÁVEIS
+   ============================== */
+:root {
+  --bg-color: #171f25;
+  --section-bg: #1f2a33;
+  --card-bg: #2a3642;
+  --primary-purple: #6f19c0;
+  --neon-purple: #b084f5;
+  --text-gray: #ddd;
+  --neon-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple),
+                 0 0 20px var(--neon-purple), 0 0 40px var(--primary-purple);
+}
+
+/* ==============================
+   RESET
+   ============================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   SEÇÕES E ANIMAÇÕES
+   ============================== */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+  background-color: var(--section-bg);
+  padding: clamp(1rem, 5vw, 2rem);
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neonBorderPulse {
+  from { box-shadow: 0 0 10px var(--primary-purple); }
+  to { box-shadow: 0 0 30px var(--neon-purple); }
+}
+
+/* ==============================
+   HEADERS
+   ============================== */
+h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+h2, h3 { color: var(--neon-purple); margin-bottom: 1rem; font-size: 1.2rem; }
+
+header {
+  padding: 3rem 1rem;
+  background-color: var(--primary-purple);
+  text-align: center;
+  position: relative;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.social-header {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-header img {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+}
+
+.social-header img:hover {
+  transform: scale(1.2);
+  box-shadow: var(--neon-shadow);
+  border-radius: 4px;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--neon-purple);
+  opacity: 0.9;
+  margin: 1rem 0;
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==============================
+   MAIN CONTAINER
+   ============================== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sobre-texto { flex: 1; }
+
+.img-centralizada {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 10%;
+  border: 5px solid var(--primary-purple);
+  box-shadow: var(--neon-shadow);
+  animation: neonBorderPulse 1.5s infinite alternate;
+}
+
+/* ==============================
+   ITENS DE FORMAÇÃO / EXPERIÊNCIA
+   ============================== */
+.item-formacao, .item-experiencia {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.item-formacao:hover, .item-experiencia:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-shadow);
+  background-color: #522a5e;
+}
+
+.info-formacao, .info-experiencia {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.info-formacao img, .info-experiencia img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ==============================
+   STATUS COLORS
+   ============================== */
+.status-amarelo { color: #ffff00 !important; font-weight: bold; }
+.status-verde { color: #0ef80e !important; font-weight: bold; }
+
+/* ==============================
+   BOTOES
+   ============================== */
+.botoes-curriculo {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-curriculo {
+  padding: 1rem 2rem;
+  background-color: var(--primary-purple);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-curriculo:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neon-shadow);
+  background-color: #344150;
+}
+
+/* ==============================
+   LISTAS DE HABILIDADES
+   ============================== */
+.lista-com-icone {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.lista-com-icone li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.lista-com-icone li a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neon-shadow);
+  background-color: #344150;
+}
+
+.lista-com-icone li img { width: 24px; height: 24px; object-fit: contain; }
+
+/* ==============================
+   CARROSSEL DE PROJETOS
+   ============================== */
+.carrossel-projetos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.lista-projetos {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem;
+  flex: 1;
+}
+
+.lista-projetos::-webkit-scrollbar { display: none; }
+
+.card-projeto {
+  flex: 0 0 320px;
+  background: linear-gradient(135deg, var(--card-bg), var(--section-bg));
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: 0.3s;
+}
+
+.card-projeto:hover {
+  transform: scale(1.05);
+  box-shadow: var(--neon-shadow);
+}
+
+.card-projeto img { width: 100%; height: 160px; object-fit: cover; }
+.card-projeto h3, .card-projeto p, .card-projeto span { padding: 0.5rem 1rem; color: #fff; }
+
+/* ==============================
+   CARROSSEL DE CURSOS
+   ============================== */
+.carrossel-cursos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.lista-cursos {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  flex: 1;
+  padding: 1rem;
+}
+
+.lista-cursos::-webkit-scrollbar { display: none; }
+
+.card-curso {
+  flex: 0 0 300px;
+  background: linear-gradient(135deg, var(--card-bg), var(--section-bg));
+  border-radius: 12px;
+  padding: 1rem;
+  transition: 0.3s;
+  scroll-snap-align: start;
+}
+
+.card-curso:hover {
+  transform: scale(1.05);
+  box-shadow: var(--neon-shadow);
+}
+
+.card-curso img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card-curso h3, .card-curso p, .card-curso span { color: #fff; }
+
+/* Botões de scroll */
+.btn-scroll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background-color: var(--primary-purple);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.btn-scroll.esquerda { left: -10px; }
+.btn-scroll.direita { right: -10px; }
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color:white;
+  color: rgb(183, 0, 255);
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: var(--primary-purple);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  color: #888;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.redes-sociais img:hover {
+  transform: scale(1.2);
+  box-shadow: var(--neon-shadow);
+  border-radius: 6px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media (max-width: 768px) {
+  .header-container { flex-direction: column; }
+  .social-header { position: static; margin-top: 1rem; }
+  .sobre-container { flex-direction: column; text-align: center; }
+  .lista-com-icone { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.6rem; }
+  .card-projeto { flex: 0 0 85%; }
+}

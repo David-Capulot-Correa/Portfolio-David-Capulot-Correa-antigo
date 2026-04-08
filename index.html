@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <link rel="stylesheet" href="portfolio.css">    
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Básico -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Portfólio</title>
+    <meta name="description" content="Portfólio de desenvolvedor web">
+    <meta name="author" content="David Capulot Corrêa">
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="sidebar" id="sidebar">
+  <a href="#sobre">Sobre</a>
+  <a href="#curriculo">Currículo</a>
+  <a href="#academica">Formação Acadêmica</a>
+  <a href="#cursos">Cursos Complementares</a>
+  <a href="#experiencia">Experiência Acadêmica</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<!-- seu resto do site continua aqui -->
+<header>
+
+    <div class="header-container">
+
+        <div class="titulo"> 
+            <h1>David Capulot Corrêa</h1>
+        </div>
+
+        <div class="social-header">
+            <a href="https://github.com/David-Capulot-Correa" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instragamabc.jpg" alt="Instagram">
+            </a>
+
+             <a href="mailto:davidcapulot2025@gmail.com">
+                <img src="emailabc.jpg" alt="Email">
+            </a>
+
+             <li>
+               <a href="https://wa.me/5521965201025" target="_blank">
+                <img src="whatzap.jpg" alt="WhatsApp">
+                </a>
+            </li>
+        </div>
+
+    </div>
+
+    <p>
+        Estudante de Ciência da Computação apaixonado por tecnologia.<br>
+        Este portfólio apresenta meus projetos e habilidades.
+    </p>
+
+</header>
+<main>
+
+<!-- SOBRE -->
+<section id="sobre">
+
+  <div class="sobre-container">
+
+    <img src="davidcapulot.jpg" class="img-centralizada">
+
+    <div class="sobre-texto">
+      <p class="subtitulo">
+      </p>
+
+      <h2>Sobre mim</h2>
+
+      <p>
+        Sou estudante de Ciência da Computação com foco em desenvolvimento de software e criação de aplicações interativas.  Possuo experiência com HTML, CSS, JavaScript, Java e linguagem C, além de conhecimentos em MySQL, redes de computadores, multimídia e ferramentas como Pacote Office e LibreOffice. 
+      </p>
+      <p>
+        Tenho interesse em desenvolver soluções criativas e funcionais, unindo programação e design. Estou constantemente buscando evolução profissional, aprendendo novas tecnologias e aprimorando minhas habilidades na área de tecnologia.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="curriculo">
+
+    <h2>Currículo</h2>
+
+    <p>Baixe ou visualize meu currículo profissional.</p>
+
+    <div class="botoes-curriculo">
+        
+        <a href="https://docs.google.com/document/d/1rg-hlVibFqUg2v5MiY9_yfawUkiAfheu/edit?usp=sharing&ouid=103652120722098115630&rtpof=true&sd=true" target="_blank" class="btn-curriculo">
+            👁️ Ver Currículo
+        </a>
+        <br>
+        <a href="https://docs.google.com/document/d/1rg-hlVibFqUg2v5MiY9_yfawUkiAfheu/export?format=pdf" download class="btn-curriculo">
+            📄 Baixar Currículo
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FORMAÇÃO ACADÊMICA -->
+<section id="academica" class="secao-curriculo">
+    <h2>Formação Acadêmica</h2>
+
+    <a href="https://www.anhanguera.com" target="_blank" rel="noopener noreferrer" class="item-formacao">
+        <h3>Bacharelado em Ciência da Computação</h3>
+        <div class="info-formacao">
+            <img src="./anhanguera.jpg" alt="Anhanguera Educacional">
+            <p>Anhanguera Educacional</p>
+        </div>
+        <span>2023 - 2026</span><br>
+        <span class="status_andamento">
+            Status - <span class="status-amarelo">Em andamento</span>
+        </span>
+    </a>
+</section>
+
+<!-- CURSOS COMPLEMENTARES -->
+<section id="cursos" class="secao-curriculo">
+    <h2>Cursos Complementares</h2>
+
+    <div class="carrossel-cursos">
+
+        <button class="btn-scroll esquerda" onclick="scrollCursos(-1)">❮</button>
+
+        <div class="lista-cursos" id="listaCursos">
+
+            <a href="Curso de informática.pdf" target="_blank" class="card-curso">
+                <img src="./ciug.jpg">
+                <h3>Informática</h3>
+                <p>Centro Interescolar Ulysses Guimarães</p>
+                <span>2020 - 2023</span><br>
+                <span class="status-verde">Finalizado</span>
+            </a>
+            
+            <a target="_blank" class="card-curso">
+                <img src="./handfull.jpeg">
+                <h3>Inglês</h3>
+                <p>Handful Languages</p>
+                <span>2024 - 2026</span><br>
+                <span class="status-amarelo">Em andamento</span>
+            </a>
+
+            <a href="Validação Certificado python.pdf" target="_blank" class="card-curso">
+                <img src="./hashatag.jpg">
+                <h3>Automação com Python</h3>
+                <p>Hashtag Treinamentos</p>
+                <span>2026</span><br>
+                <span class="status-verde">Finalizado</span>
+            </a>
+
+            <a href="Validação Certificado EXCEL.pdf" target="_blank" class="card-curso">
+                <img src="./hashatag.jpg">
+                <h3>Excel</h3>
+                <p>Hashtag Treinamentos</p>
+                <span>2026</span><br>
+                <span class="status-verde">Finalizado</span>
+            </a>
+
+        </div>
+
+        <button class="btn-scroll direita" onclick="scrollCursos(1)">❯</button>
+
+    </div>
+</section>
+
+<!-- EXPERIÊNCIA ACADÊMICA -->
+<section id="experiencia" class="secao-curriculo">
+    <h2>Experiência Acadêmica</h2>
+
+    <div class="item-experiencia">
+        <h3>Hacktown 2024 (Participação Online)</h3>
+        <div class="info-experiencia">
+            <img src="hackton.png" alt="Hacktown">
+            <p>Evento de tecnologia e inovação</p>
+        </div>
+        <span>2024</span>
+        <p>Participação online no Hacktown 2024, evento referência em tecnologia e inovação no Brasil...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Visita Técnica à Área de TI - Anhanguera Niterói</h3>
+        <div class="info-experiencia">
+            <img src="anhanguera.jpg" alt="Anhanguera Niterói">
+            <p>Atividade acadêmica</p>
+        </div>
+        <span>2024</span>
+        <p>Participação em visita técnica ao setor de Tecnologia da Informação da Anhanguera Niterói...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Desenvolvimento de Jogo da Cobra (Web)</h3>
+        <div class="info-experiencia">
+            <img src="anhanguera.jpg" alt="Jogo da Cobra">
+            <p>Projeto prático</p>
+        </div>
+        <span>2025</span>
+        <p>Desenvolvimento de um jogo da cobra (Snake) para navegador utilizando HTML, CSS e JavaScript...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Projeto de Automação</h3>
+        <div class="info-experiencia">
+            <img src="hashatag.jpg" alt="Automação">
+            <p>Projeto acadêmico</p>
+        </div>
+        <span>2026</span>
+        <p>Desenvolvimento de automação utilizando Python para otimizar processos de cadastro de dados...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Projeto de Análise de Dados</h3>
+        <div class="info-experiencia">
+            <img src="hashatag.jpg" alt="Análise de Dados">
+            <p>Projeto acadêmico</p>
+        </div>
+        <span>2026</span>
+        <p>Análise de dados utilizando Python, criação de gráficos e dashboards para identificar padrões...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Projeto de Inteligência Artificial</h3>
+        <div class="info-experiencia">
+            <img src="hashatag.jpg" alt="Inteligência Artificial">
+            <p>Projeto acadêmico</p>
+        </div>
+        <span>2026</span>
+        <p>Desenvolvimento de modelo de Inteligência Artificial capaz de realizar previsões...</p>
+    </div>
+
+    <div class="item-experiencia">
+        <h3>Desenvolvimento de Site / Aplicação Web</h3>
+        <div class="info-experiencia">
+            <img src="hashatag.jpg" alt="Desenvolvimento Web">
+            <p>Projeto acadêmico</p>
+        </div>
+        <span>2026</span>
+        <p>Criação de aplicação web utilizando HTML, CSS e JavaScript, com interface interativa e responsiva...</p>
+    </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades" class="secao-habilidades">
+    <h2>Habilidades</h2>
+
+    <!-- Idiomas -->
+    <div class="grupo-habilidades">
+        <h3>Idiomas</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://pt.wikipedia.org/wiki/Portugu%C3%AAs_brasileiro" target="_blank"><img src="brasil.jpg" alt="Português"> Português — Nativo</a></li>
+            <li><a href="https://pt.wikipedia.org/wiki/Ingl%C3%AAs_americano" target="_blank"><img src="eua.jpg" alt="Inglês"> Inglês — Intermediário</a></li>
+        </ul>
+    </div>
+        <br>
+    <!-- Linguagens de Programação -->
+    <div class="grupo-habilidades">
+        <h3>Linguagens de Marcação</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://github.com/David-Capulot-Correa/Web-Site" target="_blank"><img src="HTML5_logo_and_wordmark.svg.png" alt="HTML"> HTML</a></li>
+        </ul>
+    </div>
+    <div class="grupo-habilidades">
+        <h3>Linguagem de Estilo</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://github.com/David-Capulot-Correa/Web-Site" target="_blank"><img src="css.png" alt="CSS"> CSS</a></li>
+        </ul>
+    </div>
+    <div class="grupo-habilidades">
+        <h3>Linguagens de Programação</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://github.com/David-Capulot-Correa/JAVASCRIPT/tree/main" target="_blank"><img src="javascript.png" alt="JavaScript"> JavaScript</a></li>
+            <li><a href="https://github.com/David-Capulot-Correa/Java" target="_blank"><img src="java.jpg" alt="Java"> Java</a></li>
+            <li><a href="https://github.com/David-Capulot-Correa/Python/tree/main" target="_blank"><img src="python.jpeg" alt="Python"> Python</a></li>
+            <li><a href="https://github.com/David-Capulot-Correa/C" target="_blank"><img src="C.png" alt="C"> C</a></li>
+        </ul>
+    </div>
+    <br>
+    <!-- Banco de Dados -->
+    <div class="grupo-habilidades">
+        <h3>Banco de Dados</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://github.com/David-Capulot-Correa/MySQL" target="_blank"><img src="sql.png" alt="MySQL"> MySQL</a></li>
+        </ul>
+    </div>
+    <br>
+    <!-- Pacote Office -->
+    <div class="grupo-habilidades">
+        <h3>Pacote Office</h3>
+        <ul class="lista-com-icone">
+            <li><a href="https://github.com/David-Capulot-Correa/Excel" target="_blank"><img src="excel.jpg" alt="Excel"> Microsoft Excel</a></li>
+            <li><a href="https://github.com/David-Capulot-Correa/Word"target="_blank"><img src="Word.jpg" alt="Word"> Microsoft Word</a></li>
+            <li><a href="https://github.com/David-Capulot-Correa/PowerPoint"target="_blank"><img src="power point.png" alt="PowerPoint"> Microsoft PowerPoint</a></li>
+            <li><a target="_blank"><img src="acess.png" alt="Access"> Microsoft Access</a></li>
+        </ul>
+    </div>
+    <br>
+    <!-- Computação Gráfica -->
+    <div class="grupo-habilidades">
+        <h3>Computação Gráfica</h3>
+        <ul class="lista-com-icone">
+            <li><a target="_blank"><img src="adobe_photo.png" alt="Adobe Photoshop"> Adobe Photoshop</a></li>
+            <li><a target="_blank"><img src="ilustrador.png" alt="Adobe Illustrator"> Adobe Illustrator</a></li>
+            <li><a target="_blank"><img src="corel.png" alt="CorelDRAW"> CorelDRAW</a></li>
+        </ul>
+    </div>
+</section>
+<!-- PROJETOS -->
+<section id="projetos" class="secao-projetos">
+    <h2>Projetos</h2>
+
+    <div class="carrossel-projetos">
+        <button class="btn-scroll esquerda" onclick="scrollProjetos(-1)">◀</button>
+
+        <div class="lista-projetos" id="listaProjetos">
+            <div class="card-projeto">
+                <a href="https://david-capulot-correa.github.io/-A-Cobra-vai-Fumar-/" target="_blank">
+                    <img src="cobravai fumar.png" alt="A Cobra Vai Fumar">
+                    <h3>A Cobra Vai Fumar</h3>
+                    <p>Desenvolvimento de um jogo da cobra interativo para navegador utilizando HTML, CSS e JavaScript. Inclui sistema de pontuação, controle de vidas, ranking e interface dinâmica.</p>
+                    <span>HTML • CSS • JS</span>
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <a href="https://david-capulot-correa.github.io/Calculadora-2DEGJ/" target="_blank">
+                    <img src="2degj2.png" alt="Calculadora 2DEGJ">
+                    <h3>Calculadora 2DEGJ</h3>
+                    <p>Calculadora web interativa com operações matemáticas básicas, validação de dados e exibição dinâmica dos resultados.</p>
+                    <span>HTML • CSS • JS</span>
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <a href="https://david-capulot-correa.github.io/Two-D-For-Life/" target="_blank">
+                    <img src="tdf.png" alt="Two-D-For-Life">
+                    <h3>Two-D-For-Life</h3>
+                    <p>Site interativo para cálculo de IMC, com informações sobre saúde, classificação do índice e formulário dinâmico para análise do usuário.</p>
+                    <span>HTML • CSS • JS</span>
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <a href="https://david-capulot-correa.github.io/SpaceDodgerGame/" target="_blank">
+                    <img src="space dodger.png" alt="SpaceDodgerGamer">
+                    <h3>SpaceDodgerGamer</h3>
+                    <p>Jogo web interativo onde o jogador desvia de obstáculos, utilizando canvas e lógica de movimentação em tempo real.</p>
+                    <span>HTML • CSS • JS</span>
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <a href="https://david-capulot-correa.github.io/Snake-2/" target="_blank">
+                    <img src="snake2.png" alt="Snake-2">
+                    <h3>Snake-2</h3>
+                    <p>Versão 2 do jogo “A Cobra Vai Fumar” com melhorias no sistema de pontuação, vidas, tempo e controle de pausa.</p>
+                    <span>HTML • CSS • JS</span>
+                </a>
+            </div>
+        </div>
+
+        <button class="btn-scroll direita" onclick="scrollProjetos(1)">▶</button>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    
+    <h2>Contatos e Redes Sociais</h2> 
+    <div class="footer-contato">
+        <ul class="redes-sociais">
+            <li>
+                <a href="https://github.com/David-Capulot-Correa" target="_blank">
+                    <img src="github.png" alt="GitHub">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linkedin.png" alt="LinkedIn">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instragamabc.jpg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:davidcapulot2025@gmail.com">
+                    <img src="emailabc.jpg" alt="Email">
+                </a>
+            </li>
+
+            <li>
+               <a href="https://wa.me/5521965201025" target="_blank">
+                <img src="whatzap.jpg" alt="WhatsApp">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>© 2026 - David Capulot Corrêa</p>
+
+</footer>
+<script src="menu.js"defer></script>
+<script src="scroll.js"defer></script>
+</body>
+</html>
